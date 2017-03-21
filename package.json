@@ -1,0 +1,10 @@
+{
+  "name": "analyze-webpack-bundle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babylon": "^6.16.1",
+    "lodash": "^4.17.4"
+  }
+}
