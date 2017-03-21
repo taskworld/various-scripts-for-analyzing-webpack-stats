@@ -5,6 +5,17 @@
   "license": "MIT",
   "dependencies": {
     "babylon": "^6.16.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.0",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "prettier-eslint": "^4.3.2"
   }
 }
