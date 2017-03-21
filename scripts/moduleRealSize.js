@@ -1,6 +1,7 @@
 // # moduleRealSize.js
 //
 // Tries to figure out the real, minified size of each module.
+// Only run trusted files, as this code executes the chunk’s code.
 // Outputs to `data/module-size.json`
 
 /* eslint no-eval: off */
@@ -65,7 +66,14 @@ ${source.substr(start)}
   return result
 }
 
-// A simple heuristics to find the argument list.
+// A simple heuristics to find the position of argument list from the source.
+//
+// We want to find these:
+//     webpackJsonp([2],{...})
+//                 ^
+//     !function(...){...}([...])
+//                        ^
+//
 function findArgumentList (source) {
   let depth = 0
   let ready = true
